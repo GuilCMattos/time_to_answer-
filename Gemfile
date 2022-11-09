@@ -28,6 +28,16 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
+gem 'tty-spinner'
+gem 'faker'
+gem 'kaminari'
+gem 'kaminari-i18n'
+gem "cocoon"
+gem 'prawn-rails'
+gem 'redis'
+gem 'hiredis'
+gem 'trix'
+gem 'searchkick'
 
 gem 'rails-i18n', '~> 5.1'
 # Use ActiveStorage variant
