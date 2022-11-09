@@ -3,6 +3,6 @@
 
 
  <% if user_signed_in? %>
- <% link_to 'Efetuar logoff...[User]',
-destroy_user_session_path, method: :delete %>
+ <p> Usuário logado</p>
+ <%= link_to 'Efetuar logoff...[User]', destroy_user_session_path, method: :delete %>
  <% end %>
