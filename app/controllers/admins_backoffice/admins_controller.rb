@@ -17,6 +17,20 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     end 
   end
 
+  def new 
+    @admin = Admin.new 
+  end 
+
+  def create 
+    @admin = Admin.new(params_admin) 
+    if @admin.save 
+      redirect_to admins_backoffice_admins_path, notice: "Administrador cadastrado com sucesso"
+    else 
+      render :new
+    end
+  end
+
+
     private 
 
     def params_admin 
