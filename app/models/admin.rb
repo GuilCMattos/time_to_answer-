@@ -6,5 +6,5 @@ class Admin < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
  # Kaminari Pagination
-  paginates_per 2
+  paginates_per 5
 end
