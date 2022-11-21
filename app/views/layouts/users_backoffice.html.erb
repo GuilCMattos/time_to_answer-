@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>TimeToAnswer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application' %>
     <%= stylesheet_link_tag    'users_backoffice' %>
-   
-  </head>
 
+  </head>
 
   <body class="nav-md">
     <div class="container body">
@@ -30,13 +30,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-             
-                <%= image_tag 'img.jpg', class:"img-circle profile_img"  %>
+                <%= image_tag 'img.jpg', alt:"...", class:"img-circle profile_img" %>
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
                 <h2>John Doe</h2>
-               
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -177,17 +175,17 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <%= image_tag 'img.jpg' %>
+                    <%= image_tag 'img.jpg', alt:'' %>
                     <%= current_user.email %>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li>
-                    <%= link_to destroy_user_session_path, method: :delete do %>
-                    <i class="fa fa-sign-out pull-right"></i> Sair
-                    <% end %>
+                      <%= link_to destroy_user_session_path, method: :delete do %>
+                        <i class="fa fa-sign-out pull-right"></i>
+                        Sair
+                      <% end %>
                     </li>
-                 
                   </ul>
                 </li>
 
@@ -199,7 +197,9 @@
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
                       <a>
-                        <span class="image"><%= image_tag 'img.jpg'%></span>
+                        <span class="image">
+                          <%= image_tag 'img.jpg', alt:"Profile Image" %>
+                        </span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -211,7 +211,9 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><%= image_tag 'img.jpg'%></span>
+                        <span class="image">
+                          <%= image_tag 'img.jpg', alt:"Profile Image" %>
+                        </span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -223,7 +225,9 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><%= image_tag 'img.jpg'%></span>
+                        <span class="image">
+                          <%= image_tag 'img.jpg', alt:"Profile Image" %>
+                        </span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -235,7 +239,9 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><%= image_tag 'img.jpg'%></span>
+                        <span class="image">
+                          <%= image_tag 'img.jpg', alt:"Profile Image" %>
+                        </span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -266,8 +272,8 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h1> Layout Profiles </h1>
-                   <%= yield %>
+                <h1>LAYOUT USERS BACKOFFICE</h1>
+                <%= yield %>
               </div>
             </div>
           </div>
@@ -285,21 +291,7 @@
       </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- jQuery custom content scroller -->
-    <script src="../vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-
-     <%= javascript_include_tag 'application' %>
-     <%= javascript_include_tag 'users_backoffice' %>
-
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'users_backoffice' %>
   </body>
 </html>
