@@ -1,23 +1,23 @@
 Rails.application.routes.draw do
   namespace :site do
-    get 'welcome/index'
-    get 'search', to: 'search#questions'
+    get  'welcome/index'
+    get  'search', to: 'search#questions'
+    get  'subject/:subject_id/:subject', to: 'search#subject', as: 'search_subject'
     post 'answer', to: 'answer#question'
-    get 'search_subject/:subject_id/:subject', to: 'search#subject', as:
-'search_subject'
   end
   namespace :users_backoffice do
     get 'welcome/index'
     get 'profile', to: 'profile#edit'
+    patch 'profile', to: 'profile#update'
   end
   namespace :admins_backoffice do
     get 'welcome/index' # Dashboard
     resources :admins   # Administradores
     resources :subjects # Assuntos/Áreas
-    resources :questions # Questões
+    resources :questions # Perguntas
   end
   
-  devise_for :admins, :skip => [:registrations]
+  devise_for :admins, skip:  [:registrations]
   devise_for :users
  
   get 'inicio', to: 'site/welcome#index'
