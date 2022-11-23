@@ -10,6 +10,7 @@
     <title>TimeToAnswer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_link_tag    'application' %>
     <%= stylesheet_link_tag    'users_backoffice' %>
 
@@ -203,7 +204,7 @@
     <div class="modal fade" id="avatarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
-          <%= form_with(url: users_backoffice_profile_path, model: current_user, class:"form-horizontal form-label-left") do |form| %>
+        <%= form_with(url: users_backoffice_profile_path, model: current_user, class:"form-horizontal form-label-left") do |form| %>
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="myModalLabel">Avatar</h4>
@@ -229,6 +230,7 @@
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'users_backoffice' %>
+
     <% if notice %>
         <%= javascript_tag do %>
             $.bootstrapGrowl('<%= notice %>', {
@@ -239,6 +241,7 @@
             });
         <% end %>
     <% end %>
+
     <%= javascript_tag do %>
        $(function() {
          $('.datepicker').datepicker();
